@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Credi Card UI</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="section-header">
+          Credit Card input!
+        </h1>
+        <h3 class="sub-heading">Credit Card Form</h3>
+        <article class="credit-card-block">
+            <div class="payment-section">
+                <div class="credit-card-box">
+                  <div class="flip">
+                    <div class="front">
+                      <div class="number card-number-display">**** **** **** ****</div>
+                      <div class="card-holder">
+                        <div class="card-holder-name">YOUR NAME HERE</div>
+                      </div>
+                      <div class="expiry-date">
+                        <label>Valid Thru</label>
+                        <div class="exp-display">**/**</div>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="cvc">
+                        <div class="cvc-display"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="form ccform" autocomplete="off" novalidate>
+                  <fieldset>
+                    <input type="text" maxlength="19" id="input-card-number" data-target="card-number-display" class="input-card-number" placeholder="Card Number"/>
+                  </fieldset>
+                  <fieldset>
+                    <input type="text" class="card-holder-input" data-target="card-holder-name" placeholder="Name" maxlength="15"/>
+                  </fieldset>
+                  <fieldset class="fieldset-expiration">
+                    <input type="text" class="card-expiry-date-input" data-target="expiry-date" placeholder="Valid Thru"/>
+                  </fieldset>
+                  <fieldset class="fieldset-cvc">
+                    <input type="text" id="card-cvc" class="card-cvc" maxlength="3" placeholder="CVC"/>
+                  </fieldset>
+                  <div class="btn-section">
+                    <button class="btn btn-submit">Pay</button>
+                  </div>
+                </form>
+              </div>
+        </article>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>

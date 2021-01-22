@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+body {
+  text-align: center;
+  font-size: 14px;
+  font-family: "sans-serif";
+}
+
+.container {
+    margin: 40px auto;
+    border: 1px solid gray;
+    padding: 25px 40px;
+    box-shadow: 0 10px 40px #b3b3b3;
+}
+
+.section-header {
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #a39f9f;
+}
+
+.btn, .btn:hover {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 15px 15px;
+  border-radius: 5px;
+  width: 100%;
+  background: linear-gradient(
+    180deg
+    , #2c7af1, #308cce);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    180deg
+    , #649df3, #4a8fc0);
+}
+
+.form fieldset {
+  border: none;
+  padding: 0;
+  padding: 10px 0;
+  position: relative;
+  clear: both;
+}
+.form fieldset.fieldset-expiration {
+  float: left;
+  width: 44%;
+}
+.form fieldset.fieldset-expiration .select {
+  width: 84px;
+  margin-right: 12px;
+  float: left;
+}
+.form fieldset.fieldset-cvc {
+  clear: none;
+  float: right;
+  width: 44%;
+}
+.form fieldset label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: Inconsolata;
+}
+.form fieldset input {
+  width: 100%;
+  height: 38px;
+  color: #333;
+  padding: 10px;
+  font-size: 18px;
+  text-align: left;
+}
+.form fieldset input.input-card-number,
+.form fieldset .select.input-card-number {
+  display: inline-block;
+  margin-right: 8px;
+}
+.form fieldset input.input-card-number:last-child,
+.form fieldset .select.input-card-number:last-child {
+  margin-right: 0;
+}
+.form fieldset .select {
+  position: relative;
+}
+.form fieldset .select::after {
+  content: "";
+  border-top: 8px solid #222;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 10px;
+  pointer-events: none;
+}
+.form fieldset .select select {
+  appearance: none;
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 100%;
+  outline: none !important;
+  top: 6px;
+  left: 6px;
+  background: none;
+}
+.form fieldset .select select :-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+.btn-section {
+    clear: both;
+    padding-top: 5px;
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-card-box {
+  width: 400px;
+  height: 280px;
+  margin-top: 50px;
+  display: block;
+  transform: translateX(0%);
+}
+
+.credit-card-box:hover .flip,
+.credit-card-box.hover .flip {
+  transform: rotateY(180deg);
+}
+.credit-card-box .front,
+.credit-card-box .back {
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  background: #797a7b;
+  position: absolute;
+  color: #fff;
+  font-family: Inconsolata;
+  top: 0;
+  left: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+.credit-card-box .front::before,
+.credit-card-box .back::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  opacity: 0.05;
+}
+
+.credit-card-box .flip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.credit-card-box .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.credit-card-box .back {
+  transform: rotateY(180deg);
+}
+.credit-card-box .back .logo {
+  top: 185px;
+}
+
+.credit-card-box .number {
+    position: absolute;
+    margin: 0 auto;
+    top: 103px;
+    left: 19px;
+    font-size: 3.4rem;
+    letter-spacing: 3px;
+    color: #e2dddd;
+}
+.credit-card-box label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.credit-card-box .card-holder,
+.credit-card-box .expiry-date {
+    position: absolute;
+    margin: 0 auto;
+    top: 180px;
+    left: 19px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.card-holder-name {
+    color: #e2dddd;
+    text-align: left;
+    padding-top: 15px;
+}
+.credit-card-box .expiry-date {
+    color: #e2dddd;
+    text-align: right;
+    left: auto;
+    right: 20px;
+}
+.credit-card-box .cvc {
+  height: 36px;
+  background: #eaeaea;
+  width: 99%;
+  top: 110px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  color: #000;
+  margin: 0 auto;
+  text-align: right;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ccform {
+    display: block;
+    max-width: 400px;
+}
+.cvc-display {
+    font-weight: 500;
+}
+.focussed, .focussed.number {
+    color: #fff;
+}
+.focussed label, .focussed .exp-display{
+    color: #fff;
+}
